@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BestellApp</title>
+    <link rel="stylesheet" href="assets/cssasset/basket.css" />
+    <link rel="stylesheet" href="assets/cssasset/standard.css" />
+    <link rel="stylesheet" href="assets/cssasset/style.css" />
+    <link rel="stylesheet" href="assets/cssasset/media.css">
+    <link rel="shortcut icon" href="img/Favicon/favicon.ico" type="image/x-icon"
+    />
+    <script src="assets/scriptasset/script.js"></script>
+    <script src="assets/scriptasset/library.js"></script>
+    <script src="assets/scriptasset/template.js"></script>
+  </head>
+  <body onload="init()">
+    <header>
+        <img class="icon" src="img/Logo/Logo.png" alt="" />      
+    </header>
+        <div class="d_flex">
+            <div class="menu_Container">
+                <div class="logo_container">
+                    <img src="img/pizza.jpg" alt="" class="pizza">
+                    <div class="logo">
+                        <img src="img/logo-pizzaservice.png" alt="">
+                    </div>
+                </div>
+
+                <h1>Pizza Paradise</h1>
+                <p class="font">Bewertung (4,2 von 5 Sternen)</p>
+
+                <div class="d_wrap">
+                    <div class="d_wrap background_list">
+                        <ul class="horizontal-list" id="menu-list">
+                            <li class="li"><a href="#" onclick="filterMenu('Alle')">Alle</a></li>
+                            <li class="li"><a href="#" onclick="filterMenu('beliebt')">Beliebt</a></li>
+                            <li class="li"><a href="#" onclick="filterMenu('sparen')">Spar-Angebote</a></li>
+                            <li class="li"><a href="#" onclick="filterMenu('tagesangebot')">Tagesangebote</a></li>
+                            <li class="li"><a href="#" onclick="filterMenu('salat')">Salate</a></li>
+                            <li class="li"><a href="#" onclick="filterMenu('toast')">Doppeldecker-Toasts</a></li>
+                            <li class="li"><a href="#" onclick="filterMenu('pizza')">Pizza</a></li>
+                            <li class="li"><a href="#" onclick="filterMenu('pizzaUsa')">Amerikanische Pizza</a></li>
+                            <li class="li"><a href="#" onclick="filterMenu('pasta')">Nudelgerichte</a></li>
+                            <li class="li"><a href="#" onclick="filterMenu('fleischgericht')">Fleischgerichte</a></li>
+                            <li class="li"><a href="#" onclick="filterMenu('getränke')">Getränke</a></li>
+                        </ul>
+                    </div>
+                </div>                
+                <div id="menuContent"></div>
+            </div>
+            <div id="basket" class="basket hidden">
+                <div id="basketContent" class="basket_Content hidden">
+                </div>
+                <div id="summaryContent" class="basket_summary hidden">
+                </div>
+            </div>
+            
+            <button id="toggleBasketButton" onclick="toggleBasket()">Warenkorb anzeigen</button> 
+            
+            <div id="optionsContainer" class="options_container"></div>
+        </div>
+        <div id="orderConfirmation" class="hidden" onclick="closeOrderConfirmation(event)">
+            <p>Vielen Dank für Ihre Bestellung!</p>
+        </div>
+        <footer>
+            <a href="#">Datenschutz</a>
+            <a href="#">Impressum</a>
+            <p><a href="https://de.freepik.com/vektoren-kostenlos/pizza-badge_794807.htm#fromView=search&page=1&position=1&uuid=3abd01a4-60ad-4a8e-8790-3d2b77d17b89">freepik</a></p>
+        </footer>
+  </body>
+</html>
